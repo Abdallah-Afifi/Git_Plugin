@@ -13,7 +13,7 @@ def _walk_dir(dir):
     for filename in os.listdir(dir):
         f = os.path.join(dir, filename)
         if os.path.isdir(dir):
-            if filename.basename() == ".git":
+            if os.path.basename(filename) == ".git":
                 return True
     return False
 
